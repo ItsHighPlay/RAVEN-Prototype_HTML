@@ -1,323 +1,515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raven Prototype</title>
-<!--    <link rel="stylesheet" href="styles.css"> 
-    <script src="script.js" defer></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raven Academy - Home</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+:root{
+    --paper:#f4eedf;
+    --paper-dark:#e7dcc6;
+    --ink:#1f1f1f;
+    --accent:#c92f2f;
+    --gold:#c49a3f;
+    --success:#3b8d47;
+}
+
+body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Georgia, serif;
+    padding-top:12px;
+    padding-bottom:90px;
+}
+
+.card{
+    border:3px solid #111;
+    border-radius:14px;
+    background:linear-gradient(
+        to bottom,
+        #f8f4ea,
+        #efe6d2
+    );
+    box-shadow:4px 4px 0 rgba(0,0,0,.12);
+}
+
+.profile-card{
+    overflow:hidden;
+}
+
+.profile-banner{
+    background:
+    linear-gradient(
+        135deg,
+        #e5dbc6,
+        #f7f0df
+    );
+    padding:18px;
+}
+
+.avatar{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    border:3px solid #111;
+    background:#ddd;
+}
+
+.level-box{
+    text-align:right;
+}
+
+.level{
+    font-size:1.7rem;
+    font-weight:bold;
+}
+
+.stat{
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.progress{
+    height:12px;
+    border:1px solid #111;
+    background:#d9d0bc;
+}
+
+.progress-bar{
+    background:var(--success);
+}
+
+.section-title{
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:.5px;
+    margin-bottom:.75rem;
+}
+
+.feature-card{
+    text-align:center;
+    padding:12px;
+    min-height:120px;
+}
+
+.feature-card h6{
+    margin-top:8px;
+    font-weight:700;
+}
+
+.feature-card small{
+    display:block;
+}
+
+.course-card{
+    border:2px solid #111;
+    padding:10px;
+    border-radius:10px;
+    background:#f9f5ec;
+}
+
+.quest-card{
+    background:
+    linear-gradient(
+        135deg,
+        #f0e5c8,
+        #e6d5aa
+    );
+}
+
+.btn-raven{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    font-weight:700;
+}
+
+.btn-raven:hover{
+    background:#a92222;
+    color:white;
+}
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#111;
+    border-top:3px solid #000;
+    z-index:1000;
+}
+
+.bottom-nav .nav-link{
+    color:#f1f1f1;
+    font-size:.75rem;
+    text-align:center;
+    padding:.75rem .25rem;
+}
+
+.bottom-nav .active{
+    color:#fff;
+    background:#c92f2f;
+}
+
+.objective-item{
+    border-bottom:1px dashed #999;
+    padding:.4rem 0;
+}
+
+.objective-item:last-child{
+    border:none;
+}
+
+.badge-raven{
+    background:#111;
+    color:#fff;
+}
+
+</style>
 </head>
-    <body>
+<body>
 
-<nav class="navbar fixed-top bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fixed top</a>
-  </div>
-</nav>
+<div class="container">
 
+    <!-- PROFILE -->
 
-<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-  <div class="bg-dark p-4">
-    <h5 class="text-body-emphasis h4">Collapsed content</h5>
-    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+    <div class="card profile-card mb-3">
 
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
-    </a>
-  </div>
-</nav>
+        <div class="profile-banner">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+            <div class="d-flex justify-content-between">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
-    </div>
-  </div>
-</nav>
+                <div class="d-flex">
 
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+                    <div class="avatar me-3"></div>
 
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+                    <div>
+                        <h4 class="mb-1">Megatitle</h4>
 
-<div class="card">
-  <img src="..." class="card-img-top" alt="...">
+                        <div class="stat">
+                            Language Hunter
+                        </div>
 
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+                        <div class="stat mt-2">
+                            Coins: 123,555
+                        </div>
 
-<div class="card" aria-hidden="true">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title placeholder-glow">
-      <span class="placeholder col-6"></span>
-    </h5>
-    <p class="card-text placeholder-glow">
-      <span class="placeholder col-7"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-6"></span>
-      <span class="placeholder col-8"></span>
-    </p>
-    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
-  </div>
-</div>
+                        <div class="stat">
+                            Gems: 29
+                        </div>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+                    </div>
 
-<div id="carouselExampleControls" class="carousel slide" data-coreui-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+                </div>
 
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+                <div class="level-box">
 
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+                    <div class="level">
+                        Lv. 51
+                    </div>
 
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-coreui-target="#carouselExampleControls" data-coreui-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-coreui-target="#carouselExampleControls" data-coreui-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+                    <span class="badge badge-raven">
+                        Streak 29 Days
+                    </span>
 
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 0%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 50%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 75%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 100%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%">25%</div>
-</div>
+                </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-</div>
+            </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <div class="hearthstone-card shadow-lg">
-      <div class="card-header text-center text-white bg-dark">
-        <span class="fs-6 fw-bold">4</span> <!-- Mana Cost -->
-      </div>
-      <div class="card-img-top-wrapper">
-        <img src="https://placeholder.com" class="card-img-top" alt="Card Art">
-      </div>
-      <div class="card-body text-center">
-        <h5 class="card-title text-white">Ragnaros</h5>
-        <p class="card-text text-white">Can't attack. At the end of your turn, deal 8 damage to a random enemy.</p>
-      </div>
-      <div class="card-footer text-center text-white bg-secondary">
-        <span class="fw-bold">8 / 8</span> <!-- Attack / Health -->
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="mt-3">
 
+                <div class="d-flex justify-content-between mb-1">
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col"> <!-- Card 1 --> </div>
-  <div class="col"> <!-- Card 2 --> </div>
-  <div class="col"> <!-- Card 3 --> </div>
-</div>
+                    <small>Experience</small>
+                    <small>12,350 / 20,000</small>
 
-<nav class="navbar fixed-top bg-white border-bottom shadow-sm">
-    <div class="container d-flex align-items-center">
-        <!-- Close/Back Button -->
-        <button class="btn btn-link text-secondary"><i class="bi bi-x-lg"></i></button>
-        
-        <!-- Progress Bar -->
-        <div class="progress flex-grow-1 mx-3" style="height: 10px;">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"></div>
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:62%">
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <!-- Streak/Gems Indicator -->
-        <span class="text-warning fw-bold"><i class="bi bi-gem"></i> 150</span>
     </div>
+
+    <!-- DAILY PLAN -->
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <div class="section-title">
+                TODAY'S PLAN
+            </div>
+
+            <div class="row g-2">
+
+                <div class="col-3">
+                    <div class="card feature-card">
+                        <h6>Vocabulary</h6>
+                        <small>0 / 20</small>
+                        <small>100 XP</small>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card feature-card">
+                        <h6>Lessons</h6>
+                        <small>1 / 1</small>
+                        <small>150 XP</small>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card feature-card">
+                        <h6>Reading</h6>
+                        <small>10 / 20</small>
+                        <small>150 XP</small>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card feature-card">
+                        <h6>Quiz</h6>
+                        <small>0 / 1</small>
+                        <small>100 XP</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COURSES -->
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <div class="section-title">
+                CURRENT COURSES
+            </div>
+
+            <div class="course-card mb-2">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>Japanese N5</strong>
+                    <span>65%</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div
+                        class="progress-bar"
+                        style="width:65%">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="course-card mb-2">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>English Basic</strong>
+                    <span>42%</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div
+                        class="progress-bar"
+                        style="width:42%">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="course-card">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>Hunter Exam</strong>
+                    <span>27%</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div
+                        class="progress-bar"
+                        style="width:27%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- OBJECTIVES -->
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <div class="section-title">
+                DAILY OBJECTIVES
+            </div>
+
+            <div class="objective-item">
+                Complete 3 lessons
+            </div>
+
+            <div class="objective-item">
+                Correct 80% of answers
+            </div>
+
+            <div class="objective-item">
+                Study for 15 minutes
+            </div>
+
+            <div class="objective-item">
+                Review 20 vocabulary words
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRIORITY -->
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <div class="section-title">
+                PRIORITY
+            </div>
+
+            <div class="d-grid gap-2">
+
+                <button class="btn btn-outline-dark">
+                    Review Words
+                </button>
+
+                <button class="btn btn-outline-dark">
+                    Grammar Practice
+                </button>
+
+                <button class="btn btn-outline-dark">
+                    Boss Challenge
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DAILY QUEST -->
+
+    <div class="card quest-card">
+
+        <div class="card-body">
+
+            <div class="row align-items-center">
+
+                <div class="col-8">
+
+                    <h5>
+                        DAILY QUEST AVAILABLE
+                    </h5>
+
+                    <p class="mb-0">
+                        Complete today's challenge and earn rewards.
+                    </p>
+
+                </div>
+
+                <div class="col-4 text-end">
+
+                    <button class="btn btn-raven">
+                        GO
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+
+<nav class="bottom-nav">
+
+    <div class="container-fluid">
+
+        <div class="row text-center">
+
+            <div class="col">
+                <a class="nav-link active" href="#">
+                    Home
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="nav-link" href="#">
+                    Library
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="nav-link" href="#">
+                    Courses
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="nav-link" href="#">
+                    Community
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="nav-link" href="#">
+                    Quests
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
 </nav>
 
-<div class="grid text-center" style="--bs-rows: 3; --bs-columns: 3;">
-  <div>Auto-column</div>
-  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
-  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
-</div>
-<div class="grid text-center">
-  <div class="g-col-6">.g-col-6</div>
-  <div class="g-col-6">.g-col-6</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  <div class="g-col-6">.g-col-6</div>
-  <div class="g-col-6">.g-col-6</div>
-</div>
-<div class="d-flex flex-wrap gap-1">
-  <span class="chip">
-    <img src="/assets/img/avatars/1.jpg" class="chip-img" width="16" height="16" alt="">
-    Chip with avatar
-  </span>
-  <span class="chip">
-    <img src="/assets/img/avatars/1.jpg" class="chip-img" width="16" height="16" alt="">
-    Chip with avatar 2
-  </span>
-  <span class="chip">
-    <span class="avatar bg-primary text-white">L</span>
-    Chip with avatar 3
-  </span>
-  <span class="chip">
-    <span class="avatar bg-success text-white">L</span>
-    Chip with avatar 4
-  </span>
-</div>
-<div class="d-flex flex-wrap gap-1">
-  <span class="chip">Default</span>
-  <span class="chip active">Active</span>
-  <span class="chip chip-primary">Primary</span>
-  <span class="chip chip-primary active">Active</span>
-  <span class="chip chip-success">Success</span>
-  <span class="chip chip-success active">Active</span>
-</div>
-
-
-<div class="d-flex justify-content-center">
-  <div
-    class="border rounded"
-    data-coreui-locale="en-US"
-    data-coreui-start-date="2024/02/13"
-    data-coreui-toggle="calendar"
-  ></div>
-</div>
-    </body>
-
-
+</body>
+</html>
