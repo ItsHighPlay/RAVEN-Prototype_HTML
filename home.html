@@ -1,0 +1,370 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<nav class="navbar fixed-top bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fixed top</a>
+  </div>
+</nav>
+
+
+<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+  <div class="bg-dark p-4">
+    <h5 class="text-body-emphasis h4">Collapsed content</h5>
+    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Bootstrap
+    </a>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Navbar text with an inline element
+      </span>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="card">
+  <img src="..." class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-coreui-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-coreui-target="#carouselExampleControls" data-coreui-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-coreui-target="#carouselExampleControls" data-coreui-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 0%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 50%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 75%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 100%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%">25%</div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="hearthstone-card shadow-lg">
+      <div class="card-header text-center text-white bg-dark">
+        <span class="fs-6 fw-bold">4</span> <!-- Mana Cost -->
+      </div>
+      <div class="card-img-top-wrapper">
+        <img src="https://placeholder.com" class="card-img-top" alt="Card Art">
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-title text-white">Ragnaros</h5>
+        <p class="card-text text-white">Can't attack. At the end of your turn, deal 8 damage to a random enemy.</p>
+      </div>
+      <div class="card-footer text-center text-white bg-secondary">
+        <span class="fw-bold">8 / 8</span> <!-- Attack / Health -->
+      </div>
+    </div>
+  </div>
+</div>
+
+.hearthstone-card {
+  border: 6px solid #4a3728; /* Classic wood border */
+  border-radius: 15px;
+  background-color: #eee9e0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hearthstone-card .card-header {
+  background-color: #3b5998;
+  border-bottom: 3px solid #4a3728;
+}
+
+/* Optional Mana Crystal overlay */
+.hearthstone-card .card-header span {
+  font-size: 1.5rem;
+  background: radial-gradient(circle, #72bbf1 0%, #2974b3 100%);
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 38px;
+}
+
+.hearthstone-card .card-body {
+  background-color: #2b2b2b; /* Text background box */
+}
+
+.hearthstone-card .card-footer {
+  background-color: #d4af37; /* Golden border/stat color */
+  border-top: 3px solid #4a3728;
+}
+
+.hearthstone-card .card-img-top-wrapper {
+  border-bottom: 4px solid #4a3728;
+}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col"> <!-- Card 1 --> </div>
+  <div class="col"> <!-- Card 2 --> </div>
+  <div class="col"> <!-- Card 3 --> </div>
+</div>
+
+<nav class="navbar fixed-top bg-white border-bottom shadow-sm">
+    <div class="container d-flex align-items-center">
+        <!-- Close/Back Button -->
+        <button class="btn btn-link text-secondary"><i class="bi bi-x-lg"></i></button>
+        
+        <!-- Progress Bar -->
+        <div class="progress flex-grow-1 mx-3" style="height: 10px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"></div>
+        </div>
+
+        <!-- Streak/Gems Indicator -->
+        <span class="text-warning fw-bold"><i class="bi bi-gem"></i> 150</span>
+    </div>
+</nav>
+
+<div class="grid text-center" style="--bs-rows: 3; --bs-columns: 3;">
+  <div>Auto-column</div>
+  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
+  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
+</div>
+<div class="grid text-center">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+<div class="d-flex flex-wrap gap-1">
+  <span class="chip">
+    <img src="/assets/img/avatars/1.jpg" class="chip-img" width="16" height="16" alt="">
+    Chip with avatar
+  </span>
+  <span class="chip">
+    <img src="/assets/img/avatars/1.jpg" class="chip-img" width="16" height="16" alt="">
+    Chip with avatar 2
+  </span>
+  <span class="chip">
+    <span class="avatar bg-primary text-white">L</span>
+    Chip with avatar 3
+  </span>
+  <span class="chip">
+    <span class="avatar bg-success text-white">L</span>
+    Chip with avatar 4
+  </span>
+</div>
+<div class="d-flex flex-wrap gap-1">
+  <span class="chip">Default</span>
+  <span class="chip active">Active</span>
+  <span class="chip chip-primary">Primary</span>
+  <span class="chip chip-primary active">Active</span>
+  <span class="chip chip-success">Success</span>
+  <span class="chip chip-success active">Active</span>
+</div>
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: normal;
+    gap: 16px;
+}
+
+/* Flex Items */
+.flex-item {
+    /* Items will inherit flex container behavior */
+    /* Add individual flex properties as needed: */
+    /* flex: 1; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: auto; */
+    /* align-self: center; */
+}
+
+<div class="d-flex justify-content-center">
+  <div
+    class="border rounded"
+    data-coreui-locale="en-US"
+    data-coreui-start-date="2024/02/13"
+    data-coreui-toggle="calendar"
+  ></div>
+</div>
+
+
+
