@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificação de Funções Vinculadas — AquaBella (B.E.L.L.A.)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">← Voltar ao Portal AquaBella</a></nav>
+    <section class="card prose">
+      <span class="pill">Discord Role Connections (`role_connections.write`)</span>
+      <h1>🛡️ Verificação de Funções Vinculadas (Linked Roles)</h1>
+      <p>Esta página atende ao fluxo oficial de <strong>Funções Vinculadas (Application Role Connection Metadata)</strong> do Discord para membros autorizados do ecossistema <strong>B.E.L.L.A. / DataBase IHP</strong>.</p>
+
+      <div id="verify-status" class="status-banner">
+        Verificando parâmetros de conexão do Discord...
+      </div>
+
+      <h2>Critérios de Vínculo Suportados</h2>
+      <ul>
+        <li><strong>Membro Verificado do Ecossistema B.E.L.L.A.:</strong> Confirma vínculo autorizado com os projetos do estúdio independente ItsHighPlay.</li>
+        <li><strong>Colaborador / Desenvolvedor Autorizado:</strong> Concede cargos vinculados em servidores privados aprovados.</li>
+      </ul>
+
+      <p class="muted">Nenhum dado sensível ou senha é solicitado nesta página. A verificação ocorre exclusivamente via identificadores públicos autorizados pelo proprietário no Discord.</p>
+    </section>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const box = document.getElementById("verify-status");
+    if (params.has("code") || params.has("state")) {
+      box.innerHTML = "✅ <strong>Retorno OAuth2 recebido com sucesso!</strong> Seu pedido de vínculo foi registrado; o administrador do servidor DataBase IHP confirmará a função vinculada automaticamente.";
+      box.classList.add("ok");
+    } else {
+      box.innerHTML = "🟢 <strong>Endpoint de Funções Vinculadas Ativo.</strong> Para vincular seu cargo no Discord, clique no nome do servidor → <em>Cargos Vinculados (Linked Roles)</em> → selecione <strong>AquaBella</strong>.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponto de Extremidade de Interações — AquaBella (B.E.L.L.A.)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">← Voltar ao Portal AquaBella</a></nav>
+    <article class="card prose">
+      <span class="pill">Discord Interactions Webhook Specification</span>
+      <h1>⚡ Ponto de Extremidade de Interações (Interactions Endpoint)</h1>
+
+      <h2>Como o Discord trata Interações (Documentação Oficial)</h2>
+      <p>De acordo com <a href="https://docs.discord.com/developers/topics/" target="_blank" rel="noopener">docs.discord.com/developers/topics</a> (seção <em>Interactions — Receiving and Responding</em>), um aplicativo Discord pode receber interações de <strong>duas maneiras mutuamente exclusivas</strong>:</p>
+      <ol>
+        <li><strong>Via Gateway WebSocket (Modo Padrão Atual da AquaBella):</strong> O servidor Ubuntu mantém conexão persistente com o Gateway do Discord. Para usar este modo, <strong>deixe o campo "URL do ponto de extremidade de interações" EM BRANCO</strong> no Discord Developer Portal.</li>
+        <li><strong>Via HTTP Webhook (`POST /api/discord/interactions`):</strong> Exige um servidor HTTPS dinâmico que valide os cabeçalhos criptográficos <code>X-Signature-Ed25519</code> e <code>X-Signature-Timestamp</code> usando a <code>PUBLIC_KEY</code> da aplicação e responda <code>{"type": 1}</code> ao teste de <code>PING</code>. Sites estáticos (como GitHub Pages) retornam HTTP 405 para requisições <code>POST</code> e não devem ser colados nesse campo.</li>
+      </ol>
+
+      <h2>Rota Pronta no <code>bella-server</code></h2>
+      <p>O <code>bella-server</code> já implementa nativamente a rota <code>POST /api/discord/interactions</code> com verificação criptográfica <strong>Ed25519 (`PyNaCl`)</strong> caso deseje expor futuramente via Cloudflare Tunnel ou proxy HTTPS reverso.</p>
+    </article>
+  </div>
+</body>
+</html>

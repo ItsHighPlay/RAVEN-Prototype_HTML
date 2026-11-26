@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💧 AquaBella (B.E.L.L.A.) — Portal Oficial & Documentação Discord</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <span class="pill">B.E.L.L.A. Ecosystem · Discord Developer Compliance</span>
+      <h1>💧 AquaBella <span class="sub">// Beautiful, Efficient, Loving, Loyal Assistant</span></h1>
+      <p>Portal oficial de políticas, verificação de funções vinculadas e documentação técnica de integração da companheira digital <strong>AquaBella</strong>, construído em conformidade com a <a href="https://docs.discord.com/developers/topics/" target="_blank" rel="noopener">Documentação Oficial de Desenvolvedores do Discord</a>.</p>
+    </header>
+
+    <section class="card">
+      <h2>🔗 Links Oficiais para o Discord Developer Portal</h2>
+      <p class="muted">Clique em <strong>Copiar</strong> ao lado de cada link para colar nas configurações da sua aplicação no Discord:</p>
+
+      <div class="url-list">
+        <div class="url-item">
+          <div>
+            <strong>1. URL dos Termos de Serviço (Terms of Service URL)</strong>
+            <code id="u-tos">https://itshighplay.github.io/RAVEN-Prototype_HTML/aquabella/terms.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-tos', this)">Copiar</button>
+            <a class="btn-outline" href="terms.html">Abrir</a>
+          </div>
+        </div>
+
+        <div class="url-item">
+          <div>
+            <strong>2. URL da Política de Privacidade (Privacy Policy URL)</strong>
+            <code id="u-priv">https://itshighplay.github.io/RAVEN-Prototype_HTML/aquabella/privacy.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-priv', this)">Copiar</button>
+            <a class="btn-outline" href="privacy.html">Abrir</a>
+          </div>
+        </div>
+
+        <div class="url-item">
+          <div>
+            <strong>3. URL de Verificação de Funções Vinculadas (Linked Roles Verification URL)</strong>
+            <code id="u-roles">https://itshighplay.github.io/RAVEN-Prototype_HTML/aquabella/linked-roles.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-roles', this)">Copiar</button>
+            <a class="btn-outline" href="linked-roles.html">Abrir</a>
+          </div>
+        </div>
+
+        <div class="url-item warn">
+          <div>
+            <strong>4. URL do Ponto de Extremidade de Interações (Interactions Endpoint URL)</strong>
+            <p class="note">
+              ⚠️ <strong>Nota Oficial da Documentação do Discord:</strong> Quando a AquaBella opera via <strong>Gateway WebSocket</strong> (no Ubuntu Server), este campo no Portal do Discord é <strong>opcional e deve ficar EM BRANCO</strong>. O Discord exige um servidor HTTPS dinâmico que responda <code>POST</code> assinado com <code>Ed25519</code> (<code>{"type": 1}</code>) e desativa eventos de Gateway caso preenchido. Caso futuramente exponha o <code>bella-server</code> por túnel HTTPS público, a rota pronta é <code>/api/discord/interactions</code>.
+            </p>
+          </div>
+          <div class="actions">
+            <a class="btn-outline" href="interactions.html">Ver Guia Técnico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Mantido por <strong>ItsHighPlay (Merlin)</strong> · Ecossistema B.E.L.L.A. · <a href="terms.html">Termos</a> · <a href="privacy.html">Privacidade</a> · <a href="linked-roles.html">Linked Roles</a> · <a href="interactions.html">Interactions API</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function copyId(id, btn) {
+      const txt = document.getElementById(id).textContent.trim();
+      navigator.clipboard.writeText(txt);
+      const old = btn.textContent;
+      btn.textContent = "✅ Copiado!";
+      setTimeout(() => btn.textContent = old, 2000);
+    }
+  </script>
+</body>
+</html>
