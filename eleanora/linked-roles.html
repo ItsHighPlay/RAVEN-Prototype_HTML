@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funções Vinculadas — Eleanora (Projeto Panapaná)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">← Voltar ao Portal Eleanora</a></nav>
+    <section class="card">
+      <span class="pill">Discord Role Connections</span>
+      <h1>🛡️ Verificação de Funções Vinculadas — Eleanora</h1>
+      <div id="verify-status" class="status-banner">Verificando conexão...</div>
+      <p class="muted">Endpoint oficial de verificação de cargos vinculados para membros do Projeto Panapaná / DataBase IHP.</p>
+    </section>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const box = document.getElementById("verify-status");
+    if (params.has("code") || params.has("state")) {
+      box.innerHTML = "✅ <strong>Retorno OAuth2 recebido!</strong> Vínculo registrado para confirmação no servidor DataBase IHP.";
+      box.classList.add("ok");
+    } else {
+      box.innerHTML = "🦋 <strong>Endpoint Linked Roles da Eleanora Ativo.</strong>";
+    }
+  </script>
+</body>
+</html>

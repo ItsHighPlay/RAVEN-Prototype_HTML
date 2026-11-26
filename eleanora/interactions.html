@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webhooks & Interactions — Eleanora (Projeto Panapaná)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">← Voltar ao Portal Eleanora</a></nav>
+    <article class="card">
+      <span class="pill">Ed25519 Verified Webhook Edge (:7577)</span>
+      <h1>⚡ Rotas Dedicadas de Webhook da Eleanora</h1>
+      <ul>
+        <li><strong>Webhook Events URL:</strong> <code>https://&lt;tunel-cloudflared&gt;/eleanora/discord/webhooks</code> (valida assinatura <code>Ed25519</code> usando <code>ELEANORA_DISCORD_PUBLIC_KEY</code> e retorna <code>204 No Content</code>).</li>
+        <li><strong>Interactions Endpoint URL (opcional):</strong> <code>https://&lt;tunel-cloudflared&gt;/eleanora/discord/interactions</code> (deixe em branco no Discord caso deseje receber eventos via Gateway WebSocket para <code>!talk-free</code>).</li>
+      </ul>
+    </article>
+  </div>
+</body>
+</html>

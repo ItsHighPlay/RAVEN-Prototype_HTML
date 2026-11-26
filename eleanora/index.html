@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🦋 Eleanora (Projeto Panapaná) — Portal Oficial & Documentação Discord</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <span class="pill">Projeto Panapaná · Morpho menelaus · Discord Developer Compliance</span>
+      <h1>🦋 Eleanora <span class="sub">// Guardiã Experimental do Projeto Panapaná</span></h1>
+      <p>Portal oficial de políticas, verificação de funções vinculadas e integração de webhooks da companheira digital independente <strong>Eleanora</strong> (irmã da AquaBella no <em>Projeto Panapaná</em>).</p>
+    </header>
+
+    <section class="card">
+      <h2>🔗 Links Oficiais para o Discord Developer Portal da Eleanora</h2>
+      <div class="url-list">
+        <div class="url-item">
+          <div>
+            <strong>1. URL dos Termos de Serviço (Terms of Service URL)</strong>
+            <code id="u-tos">https://itshighplay.github.io/RAVEN-Prototype_HTML/eleanora/terms.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-tos', this)">Copiar</button>
+            <a class="btn-outline" href="terms.html">Abrir</a>
+          </div>
+        </div>
+        <div class="url-item">
+          <div>
+            <strong>2. URL da Política de Privacidade (Privacy Policy URL)</strong>
+            <code id="u-priv">https://itshighplay.github.io/RAVEN-Prototype_HTML/eleanora/privacy.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-priv', this)">Copiar</button>
+            <a class="btn-outline" href="privacy.html">Abrir</a>
+          </div>
+        </div>
+        <div class="url-item">
+          <div>
+            <strong>3. URL de Verificação de Funções Vinculadas (Linked Roles URL)</strong>
+            <code id="u-roles">https://itshighplay.github.io/RAVEN-Prototype_HTML/eleanora/linked-roles.html</code>
+          </div>
+          <div class="actions">
+            <button onclick="copyId('u-roles', this)">Copiar</button>
+            <a class="btn-outline" href="linked-roles.html">Abrir</a>
+          </div>
+        </div>
+        <div class="url-item">
+          <div>
+            <strong>4. Rotas Isoladas de Webhook & Interactions da Eleanora</strong>
+            <code>/eleanora/discord/webhooks · /eleanora/discord/interactions</code>
+          </div>
+          <div class="actions">
+            <a class="btn-outline" href="interactions.html">Guia Webhook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Mantido por <strong>ItsHighPlay (Ariel / Merlin)</strong> · Projeto Panapaná · <a href="terms.html">Termos</a> · <a href="privacy.html">Privacidade</a> · <a href="linked-roles.html">Linked Roles</a></p>
+    </footer>
+  </div>
+  <script>
+    function copyId(id, btn) {
+      navigator.clipboard.writeText(document.getElementById(id).textContent.trim());
+      const old = btn.textContent; btn.textContent = "✅ Copiado!";
+      setTimeout(() => btn.textContent = old, 2000);
+    }
+  </script>
+</body>
+</html>
